@@ -7,7 +7,7 @@ include_once './includes/_header.php';
 
 <h1>Home</h1>
 <?php
-for ($i=0; $i < 9; $i++) { 
+for ($i=0; $i < 30; $i++) { 
     echo $i.'<br>';
 
     echo $produtos[$i]['nome']. '<br>';
