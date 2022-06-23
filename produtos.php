@@ -5,8 +5,9 @@ include_once './includes/_head.php';
 include_once './includes/_header.php';
 ?>
 
-<h1>Produtos</h1>
 <div class="container">
+<h2>Produtos</h2>
+
     <div class="row mt-5">
     <?php
     foreach ($produtos as $key => $value) {
