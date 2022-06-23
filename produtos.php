@@ -12,7 +12,7 @@ include_once './includes/_header.php';
     foreach ($produtos as $key => $value) {
     ?>
 
-    <div class="card m-3" style="width: 18rem;">
+    <div class="card m-3" style="width: 12rem;">
         <img src="./content/<?php echo $value['imagem'];?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?php echo $value['nome'];?></h5>

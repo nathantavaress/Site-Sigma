@@ -12,7 +12,7 @@ include_once './includes/_header.php';
     for ($i=0; $i < 50 ; $i++) { 
     ?>
 
-    <div class="card m-3" style="width: 18rem;">
+    <div class="card m-3" style="width: 12rem;">
         <img src="./content/<?php echo $produtos[$i]['imagem']?>" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?php echo $produtos[$i]['nome']?></h5>
