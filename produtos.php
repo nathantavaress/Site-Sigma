@@ -9,9 +9,7 @@ include_once './includes/_header.php';
 <div class="container">
     <div class="row mt-5">
     <?php
-
     foreach ($produtos as $key => $value) {
-     
     ?>
 
     <div class="card m-3" style="width: 18rem;">
