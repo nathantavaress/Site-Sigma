@@ -10,9 +10,10 @@ $id = $_GET['id'];
     <div class="row">
         <div class="col">
             <h1><?php echo $produtos[$id]['nome'];?></h1>
-            <p><?php echo $produtos[$id]['descricao']?></p>
             <img src="./content/<?php echo $produtos[$id]['imagem']?>">
-            <h4><?php echo $produtos[$id]['preco']?></h4>
+            <h3><?php echo $produtos[$id]['preco']?></h3>
+            <p><?php echo $produtos[$id]['descricao']?></p>
+
         </div>
     </div>
         

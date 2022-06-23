@@ -7,9 +7,9 @@ include_once './includes/_header.php';
 <div class="container">
 <h2>Promoção</h2>
 
-    <div class="row mt-5">
+    <div class="row mt-3">
     <?php
-    for ($i=0; $i < 30 ; $i++) { 
+    for ($i=0; $i < 50 ; $i++) { 
     ?>
 
     <div class="card m-3" style="width: 18rem;">
