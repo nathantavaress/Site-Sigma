@@ -7,23 +7,19 @@ include_once './includes/_header.php';
 // valida se a variavl post txtNome foi enviada
 if (isset( $_POST['txtNome'] ) ) {
     $nome = strtoupper ($_POST['txtNome']);
-    echo $nome;
-    
+    echo $nome. '<br>';
 }
-echo '<br>';
 if (isset( $_POST['txtemail'] ) ) {
     $email = ($_POST['txtemail']);
-    echo $email;
+    echo $email. '<br>';
 }
-echo '<br>';
 if (isset( $_POST['txtcel'] ) ){
     $telefone = strtoupper ($_POST['txtcel']);
-    echo $telefone;
+    echo $telefone. '<br>';
 }
-echo '<br>';
 if (isset( $_POST['txtmsg'] ) ){
     $mensagem = ($_POST['txtmsg']);
-    echo $mensagem;
+    echo $mensagem. '<br>';
 }
 ?>
 
