@@ -17,7 +17,7 @@ include_once './includes/_header.php';
     $numProdutos = mysqli_num_rows($exec);
     //percorre todos os dados extraidos do banco
     while ( $dados = mysqli_fetch_assoc($exec)) {
-        echo '<h1>' .$dados['Preco'].'</h1>';
+        echo '<h1>' .$dados['Nome'].'</h1>';
     }
 
     // cria laco de repetiçao para exibir os produtos
