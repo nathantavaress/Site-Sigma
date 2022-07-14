@@ -24,3 +24,7 @@
 </body>
 
 </html>
+<?php
+// fechar conexão com banco de dados
+mysqli_close($conn);
+?>
