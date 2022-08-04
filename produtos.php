@@ -6,7 +6,7 @@ include_once './includes/_header.php';
 ?>
 
 <div class="container">
-<h2>Promoção</h2>
+<h2>Nossos macacos</h2>
 
     <div class="row mt-3">
     <?php
@@ -21,7 +21,7 @@ include_once './includes/_header.php';
     ?>
 
     <div class="card m-3" style="width: 12rem;">
-        <img src="./content/<?php echo $dados['Imagem']?>" class="card-img-top" alt="...">
+        <img src="./content/<?php echo $dados['Imagem']?>" style="height:170px;" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title"><?php echo $dados['Nome']?></h5>
             <p class="card-text"><?php echo $dados['Descricao']?></p>

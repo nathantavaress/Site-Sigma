@@ -10,7 +10,7 @@ include_once './includes/_header.php';
     <div class="row mt-3">
     <?php
     // cria uma variavel que contem SQL executado
-    $sql = "SELECT * FROM produtos WHERE Ativo = 1 LIMIT 10";
+    $sql = "SELECT * FROM produtos WHERE Ativo = 1 LIMIT 10 ";
     // executa o comando SQL
     $exec = mysqli_query($conn, $sql);
     // informar a quantidade de registros de dados
