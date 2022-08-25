@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Ago-2022 às 17:15
+-- Tempo de geração: 25-Ago-2022 às 17:25
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.3.27
 
@@ -101,6 +101,23 @@ INSERT INTO `produtos` (`ProdutoID`, `Nome`, `Descricao`, `Imagem`, `Preco`, `Ca
 (29, 'MACACO #29', 'MACACO ÚNICO', 'macaco29.png', 1000, 1, 1),
 (30, 'MACACO #30', 'MACACO ÚNICO', 'macaco30.png', 1000, 1, 1);
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `UsuarioID` int(255) NOT NULL,
+  `Nome` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Senha` varchar(255) NOT NULL,
+  `CPF` varchar(255) NOT NULL,
+  `Telefone` varchar(255) NOT NULL,
+  `DataNascimento` varchar(255) NOT NULL,
+  `Logradouro` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -118,6 +135,12 @@ ALTER TABLE `produtos`
   ADD PRIMARY KEY (`ProdutoID`);
 
 --
+-- Índices para tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`UsuarioID`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -131,7 +154,13 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
+  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+
+--
+-- AUTO_INCREMENT de tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `UsuarioID` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
