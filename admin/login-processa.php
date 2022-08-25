@@ -1,37 +1,36 @@
-<?php
+<?php 
 
 session_start();
-
-include_once '../includes/_dados.php';
+include_once '../includes/_banco.php';
 
 $acao = $_REQUEST['acao'];
 
 switch ($acao) {
+
     case 'logoff':
+     $_SESSION ['LOGIN'] = '';
+     unset($_SESSION['LOGIN']);
+     header ('location: ./login.php?msg=3');
+    break;
 
-        $_SESSION['LOGIN'] = '';
-        unset($_SESSION['LOGIN']);
-        header('location: ./login.php?msg=3');
+case 'login';
+     $email = $_POST['email'];
+     $senha = $_POST ['senha'];
 
-        break;
+     $sql = "SELECT * FROM usuarios WHERE Email = '" .$email. "' AND Senha = '".$senha."'";
+     $resultado = mysqli_query($conn,$sql);
+    $dados = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 
-    case 'login':
+    if (!empty($dados)) {
 
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
+     $_SESSION['LOGIN'] = array('Nome' =>$dados['Nome']);
+    header('location: ./categoria-lista.php');
 
-        $sql = "SELECT * FROM usuarios WHERE Email = '" . $email . "' AND Senha = '" . $senha . "' ";
-        $resultado = mysqli_query($conn, $sql);
-        $dados = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+     }else{
+     header('location: ./login.php?msg=1');
+     }
 
-        if (!empty($dados)) {
+    break;
 
-            $_SESSION['LOGIN'] = array('Nome' => $dados['Nome']);
-
-            header('location: ./index.php');
-        } else {
-            header('location: ./login.php?msg=1');
-        }
-
-        break;
 }
+?>
