@@ -27,7 +27,7 @@ include_once './_menu.php';
         ?>
 
                 <tr style="text-align: center;">
-                    <td><?php echo $dado['ProdutosID']; ?></td>
+                    <td><?php echo $dado['ProdutoID']; ?></td>
                     <td><a style="color: #000000; " href="produto-salvar.php?acao=salvar&id=<?php echo $dado['ProdutosID']; ?>"><?php echo $dado['Nome'] ?></a></td>
                     <td><a href="produto-processa.php?acao=excluir&id=<?php echo $dado['ProdutosID']; ?>">Excluir</a></td>
                 </tr>

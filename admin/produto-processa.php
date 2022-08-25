@@ -18,8 +18,7 @@ switch ($acao) {
     case 'salvar';
         $nome = $_POST['nome'];
         $descricao = $_POST['descricao'];
-        // print($nome);
-        // print($descricao);
+        
 
        if (!isset($nome) || !isset($descricao)) {
         header('location: ./produtos-lista.php');
